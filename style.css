@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4fa3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1f8f;
+}
+
+#message {
+  color: #ffb6dd;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.heart {
+  position: relative;
+  width: 450px;
+  height: 250px;
+  margin: 30px auto 0;
+}
+
+.word {
+    font-family: Georgia, serif;
+  position: absolute;
+  color: #ff8fc7;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow:
+    0 0 4px #ff4fa3,
+    0 0 10px #ff4fa3;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: glow 5s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+    color: #ff8fc7;
+    text-shadow: none;
+  }
+
+  8% {
+    opacity: 1;
+    color: #ffffff;
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 15px #ff4fa3,
+      0 0 25px #ff1f8f,
+      0 0 45px #ff1f8f;
+  }
+
+  16% {
+    opacity: 0.1;
+    color: #ff8fc7;
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 0.3;
+    color: #ff8fc7;
+    text-shadow: none;
+  }
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 8px white;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
