@@ -10,9 +10,29 @@
     
     <div class="stars"></div>
 
-    <h1>хэй!! у меня есть маленький подарочек для тебя</h1>
+    <h1>хэй!! у меня есть маленький подарочек для тебя, муа♡♡</h1>
 
-    <button onclick="showHeart()">нажми на меня</button>
+    <button id="firstBtn" onclick="showHeart()">нажми на меня</button>
+
+    <button id="secondHeartBtn" class="corner-btn right-btn">далее♡</button>
+    <button id="backBtn" class="corner-btn left-btn hidden">← обратно♡</button>
+    <button id="thirdBtn" class="corner-btn bottom-btn hidden">дальшее♡</button>
+
+    <canvas id="secondHeart" class="second-heart hidden"></canvas>
+   <div id="thirdPage" class="hidden">
+    <div class="third-card">
+        <h1>а вот и еще один подарочек ♡</h1>
+
+        <p id="typedText"></p>
+
+        <button id="finalHeartBtn">нажми еще раз ♡</button>
+        <div id="finalMessage" class="hidden">я тебя люблю ♡</div>
+    </div>
+
+    <div id="fallingHearts"></div>
+
+    <button id="backToSecondBtn" class="corner-btn left-btn">← обратно♡</button>
+</div>
 
     <p id="message"></p>
 
